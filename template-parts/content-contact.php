@@ -1,6 +1,8 @@
+<?php echo do_shortcode('[contact-form-7 id="30" title="Contact Us"]'); ?>
+
 <?php $frontpage_id = get_option( 'page_on_front' ); ?>
 <!-- service sec start -->
-<section class="service-sec">
+<!-- <section class="service-sec">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -36,5 +38,5 @@
                 } ?>
         </div>
     </div>
-</section>
+</section> -->
 <!-- service sec end -->

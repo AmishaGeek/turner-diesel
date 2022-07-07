@@ -47,15 +47,24 @@
 						<div class="col-lg-6">
 							<ul class="contact-link">
 								<li>
-									<a href="tel:4177817302" title="417-781-7302" class="phone">
-										<span class="icon"><img width="20" height="20" src="<?php echo home_url(); ?>/wp-content/themes/turner-diesel/assets/images/phone-alt.svg" alt="Phone Alt"></span>
-										<span class="text">417-781-7302</span>
+									<?php
+									//Phone number
+									$phone = get_field('phone','option');
+									$val = array("(", ")", " ", "-", ".");
+									$replace = array("", "-", "", "", "-");
+
+									//Phone link
+									$phone_link = str_replace($val, $replace, $phone);
+									?>
+									<a href="tel:<?php echo $phone_link; ?>" title="Call <?php echo $phone; ?>" class="phone">
+										<span class="icon"><img width="20" height="20" src="<?php echo home_url(); ?>/wp-content/themes/turner-diesel/assets/images/phone-alt.svg" alt="Phone Icon"></span>
+										<span class="text"><?php echo $phone; ?></span>
 									</a>
 								</li>
 								<li>
-									<a href="javascript:void(0);" target="_blank" title="4405 W Energy Lane Joplin, MO 64801">
-										<span class="icon"><img width="15" height="20" src="<?php echo home_url(); ?>/wp-content/themes/turner-diesel/assets/images/map-marker-alt.svg" alt="Map Alt"></span>
-										<span class="text">4405 W Energy Lane Joplin, MO 64801</span>
+									<a href="<?php the_field('header_address_link','option'); ?>" target="_blank" title="<?php the_field('header_address','option'); ?>">
+										<span class="icon"><img width="15" height="20" src="<?php echo home_url(); ?>/wp-content/themes/turner-diesel/assets/images/map-marker-alt.svg" alt="Map Icon"></span>
+										<span class="text"><?php the_field('header_address','option'); ?></span>
 									</a>
 								</li>
 							</ul>
@@ -94,7 +103,7 @@
 								</div><!-- .site-branding -->
 							</div>
 							<div class="header-btn text-right">
-								<a href="javascript:void(0);" title="Request A Quote" class="sec-btn lg-btn">Request A Quote</a>
+								<a href="javascript:void(0);" title="Request A Quote" data-toggle="modal" data-target="#request_quote" class="sec-btn lg-btn">Request A Quote</a>
 							</div>
 						</div>
 					</div>
