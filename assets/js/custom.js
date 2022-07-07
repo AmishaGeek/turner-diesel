@@ -79,7 +79,7 @@ jQuery(document).ready(function($) {
             }
         ]
     });
-    jQuery('.review-slider').slick({
+    jQuery('.gallery-slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
         infinite: true,
@@ -87,8 +87,8 @@ jQuery(document).ready(function($) {
         arrows: true,
         autoplay: true,
         autoplaySpeed: 2000,
-        prevArrow: '<button class="slide-arrow prev-arrow"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
-        nextArrow: '<button class="slide-arrow next-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></button>',
+        prevArrow: '<button class="slide-arrow prev-arrow"></button>',
+        nextArrow: '<button class="slide-arrow next-arrow"></button>',
         responsive: [{
             breakpoint: 992,
             settings: {
@@ -101,17 +101,20 @@ jQuery(document).ready(function($) {
             }
         }]
     });
-    jQuery('.services-tabbing-slider').slick({
+    jQuery('.our-service-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: false,
         arrows: true,
-        // autoplay: true,
-        // autoplaySpeed: 2000,
-        
-        prevArrow: '<button class="slide-arrow prev-arrow"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
-        nextArrow: '<button class="slide-arrow next-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></button>',
+        dots: true,
+        appendDots: $('.dot-class'),
+        customPaging: function(slider, i) {
+            var thumb = $(slider.$slides[i]).find(".dot-title").text();
+            return thumb;
+        },
+        dotsClass: 'dot-class',
+        prevArrow: '<button class="slide-arrow prev-arrow"></button>',
+        nextArrow: '<button class="slide-arrow next-arrow"></button>',
         responsive: [{
                 breakpoint: 992,
                 settings: {

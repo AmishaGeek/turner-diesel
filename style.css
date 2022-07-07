@@ -1085,14 +1085,14 @@ h6 {
     font-size: 80px;
     line-height: 80px;
     text-transform: capitalize;
-    margin-bottom: 27px;
+    margin-bottom: 22px;
 }
 
 .h2-title {
     font-size: 35px;
     color: var(--dark-color);
     line-height: 43px;
-    margin-bottom: 13px;
+    margin-bottom: 27px;
     text-transform: capitalize;
 }
 
@@ -1272,6 +1272,15 @@ button.close:hover {
     z-index: 2;
 }
 
+.sec-btn span.call-us {
+    padding: 0 0 0 5px;
+    transition: .3s;
+}
+
+.sec-btn:hover span.call-us {
+    color: var(--dark-color);
+}
+
 .sec-btn:hover,
 .form-submit .submit:hover {
     background: var(--white-color);
@@ -1367,10 +1376,10 @@ button.close:hover {
 
 .slick-arrow {
     position: absolute;
-    bottom: -60px;
-    left: 15px;
-    width: 30px;
-    height: 30px;
+    top: -107px;
+    right: 0;
+    width: 60px;
+    height: 70px;
     padding: 0;
     border: none !important;
     background: var(--primary-color);
@@ -1385,8 +1394,32 @@ button.close:hover {
     align-items: center;
 }
 
-.slide-arrow.next-arrow.slick-arrow {
-    margin-left: 50px;
+.slick-arrow::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 50%;
+    left: 50%;
+    border: 2px solid var(--white-color);
+    transition: .3s;
+}
+
+.slick-arrow.prev-arrow::before {
+    transform: translate(-30%, -50%) rotate(45deg);
+    border-top: 0;
+    border-right: 0;
+}
+
+.slick-arrow.next-arrow::before {
+    border-color: var(--white-color);
+    transform: translate(-70%, -50%) rotate(45deg);
+    border-left: 0;
+    border-bottom: 0;
+}
+
+.prev-arrow.slick-arrow {
+    right: 70px;
 }
 
 .slick-arrow:hover {
@@ -1652,7 +1685,7 @@ button.close:hover {
 /*==========Header CSS==========*/
 
 .site-header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -1666,12 +1699,16 @@ button.close:hover {
     transition: .3s;
 }
 
+.sticky_head .top-header {
+    margin-top: -164px;
+}
+
 .top-header .contact-link {
-    padding: 0 0 0 150px;
+    padding: 0 0 0 200px;
 }
 
 .contact-link li {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .contact-link li:last-child {
@@ -1702,6 +1739,11 @@ button.close:hover {
     color: var(--red-color);
 }
 
+.top-header .contact-link li a:hover .text {
+    color: var(--white-color);
+    text-decoration: underline !important;
+}
+
 .contact-link li a .text {
     color: var(--white-color);
     font-size: 16px;
@@ -1724,7 +1766,7 @@ button.close:hover {
     display: inline-block;
     float: left;
     position: relative;
-    margin: 0 71px;
+    margin: 0 74px;
 }
 
 .main-navigation .menu li:first-child {
@@ -1732,6 +1774,7 @@ button.close:hover {
 }
 
 .main-navigation .menu li:last-child {
+    margin-left: 70px;
     margin-right: 0;
 }
 
@@ -1809,7 +1852,7 @@ button.close:hover {
     transform: rotateX(0deg);
 }
 
-.main-navigation .menu li.menu-item-has-children>a:after {
+.main-navigation .menu li.menu-item-has-children>a::after {
     content: "";
     transition: 0.3s;
     position: absolute;
@@ -1818,13 +1861,15 @@ button.close:hover {
     border: 2px solid var(--white-color);
     border-top: 0;
     border-left: 0;
-    top: 6px;
-    right: -20px;
+    top: 50%;
+    right: -16px;
     transform: rotate(45deg);
+    margin-top: -8px;
 }
 
-.main-navigation .menu li.menu-item-has-children:hover>a:after {
+.main-navigation .menu li.menu-item-has-children:hover>a::after {
     transform: rotate(223deg);
+    margin-top: -4px;
 }
 
 .main-navigation .menu li.menu-item-has-children ul.sub-menu li {
@@ -1862,7 +1907,23 @@ button.close:hover {
 
 .main-banner {
     position: relative;
-    padding: 200px 0 200px;
+    padding: 432px 0 296px;
+    background: #000;
+}
+
+.main-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 400px;
+    width: 100%;
+    height: 100%;
+    background: -moz-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -o-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -ms-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
 }
 
 .banner-img {
@@ -1871,16 +1932,15 @@ button.close:hover {
     position: absolute;
     right: 0;
     bottom: 0;
+    background-position: bottom;
+    background-size: contain;
 }
 
-.main-banner:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba( var(--overlay-color), 0.6);
+.banner-content p {
+    font-size: 30px;
+    line-height: 44px;
+    font-weight: 300;
+    margin-bottom: 71px;
 }
 
 .banner-btn .sec-btn+.sec-btn {
@@ -1889,6 +1949,202 @@ button.close:hover {
 
 
 /*==========Banner CSS End==========*/
+
+
+/*==========About Us CSS Start==========*/
+
+.about-sec {
+    position: relative;
+    background: var(--primary-color);
+}
+
+.about-img-wp {
+    position: relative;
+    width: calc(100% + 400px);
+    height: 100%;
+    display: block;
+    float: right;
+    right: -27px;
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+}
+
+.about-content {
+    padding: 152px 100px 113px 97px;
+}
+
+
+/*==========About Us CSS End==========*/
+
+
+/*==========Our Services CSS Start==========*/
+
+.our-service-sec {
+    position: relative;
+    padding: 150px 0 112px;
+}
+
+.our-service-sec .sec-title .h2-title {
+    margin-bottom: 58px;
+}
+
+.service-menu {
+    margin-bottom: 33px;
+}
+
+.service-menu ul li {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 48px;
+    padding: 19px 20px;
+    color: var(--input-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.service-menu ul li:first-child {
+    margin-left: 0;
+}
+
+.service-menu ul li:last-child {
+    margin-left: 27px;
+    margin-right: 0;
+}
+
+.service-menu ul li:hover {
+    color: var(--red-color);
+}
+
+.service-menu .active {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 25px;
+    background-color: var(--red-color);
+    color: var(--white-color);
+    position: relative;
+}
+
+.service-menu .active:hover {
+    color: var(--white-color);
+}
+
+.service-menu .active::before {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-top: 19px solid var(--red-color);
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+}
+
+.service-img-wp {
+    width: calc(100% + 298px);
+    height: 100%;
+    display: block;
+}
+
+.service-img {
+    width: 100%;
+    height: 100%;
+}
+
+.service-content {
+    background: var(--white-color);
+    box-shadow: 0 3px 23px rgba(0, 0, 0, .04);
+    padding: 77px 100px 78px 85px;
+    margin: 149px 0 49px;
+}
+
+.service-content h3 {
+    color: var(--primary-color);
+    font-size: 18px;
+    line-height: 23px;
+    text-transform: uppercase;
+    margin-bottom: 9px;
+}
+
+.service-content .h2-title {
+    margin-bottom: 20px;
+}
+
+.service-content p {
+    color: #707070;
+    height: 84px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    padding: 0 40px 0 0;
+    overflow: hidden;
+    margin-bottom: 22px;
+}
+
+.learn-more {
+    color: var(--red-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    transition: .3s;
+}
+
+a.learn-more .icon {
+    border: 2px solid #C4482C;
+    width: 7px;
+    height: 7px;
+    display: inline-block;
+    transform: rotate(45deg);
+    border-left: 0;
+    border-bottom: 0;
+    position: relative;
+    top: -2px;
+    left: 8px;
+    transition: .3s;
+}
+
+a.learn-more:hover {
+    color: var(--red-color);
+}
+
+a.learn-more:hover .icon {
+    margin-left: 6px;
+}
+
+
+/*==========Our Services CSS End==========*/
+
+
+/*==========Gallery CSS Start==========*/
+
+.gallery-sec {
+    position: relative;
+}
+
+.gallery-img {
+    height: 655px;
+}
+
+.gallery-slider .slick-list {
+    overflow: visible;
+    width: calc(100% + 435px);
+    left: 167px;
+}
+
+.gallery-slider .slick-arrow {
+    background: var(--white-color);
+}
+
+.gallery-slider .slick-arrow::before {
+    border-color: var(--primary-color);
+}
+
+
+/*==========Gallery CSS End==========*/
 
 
 /*==========404 CSS==========*/
