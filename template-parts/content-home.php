@@ -58,13 +58,7 @@
                 <div class="sec-title">
                     <h2 class="h2-title"><?php the_field('our_services_title'); ?></h2>
                 </div>
-                <div class="service-menu dot-class">
-                    <!-- <ul>
-                        <li class="active">Heavy Equipment Repair and Parts</li>
-                        <li>Hydraulics</li>
-                        <li>Efficient Welding Solutions</li>
-                    </ul> -->
-                </div>
+                <div class="service-menu dot-class"></div>
             </div>
         </div>
         <div class="row our-service-slider">

@@ -62,7 +62,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="<?php the_field('header_address_link','option'); ?>" target="_blank" title="<?php the_field('header_address','option'); ?>">
+									<a href="<?php the_field('address_link','option'); ?>" target="_blank" title="<?php the_field('header_address','option'); ?>">
 										<span class="icon"><img width="15" height="20" src="<?php echo home_url(); ?>/wp-content/themes/turner-diesel/assets/images/map-marker-alt.svg" alt="Map Icon"></span>
 										<span class="text"><?php the_field('header_address','option'); ?></span>
 									</a>
@@ -91,6 +91,9 @@
 										)
 									);
 									?>
+									<div class="for-mob">
+										<a href="javascript:void(0);" title="Request A Quote" data-toggle="modal" data-target="#request_quote" class="sec-btn lg-btn">Request A Quote</a>
+									</div>
 								</div>
 							</nav><!-- #site-navigation -->
 						</div>
@@ -102,8 +105,10 @@
 									?>
 								</div><!-- .site-branding -->
 							</div>
-							<div class="header-btn text-right">
-								<a href="javascript:void(0);" title="Request A Quote" data-toggle="modal" data-target="#request_quote" class="sec-btn lg-btn">Request A Quote</a>
+							<div class="for-des">
+								<div class="header-btn text-right">
+									<a href="javascript:void(0);" title="Request A Quote" data-toggle="modal" data-target="#request_quote" class="sec-btn lg-btn">Request A Quote</a>
+								</div>
 							</div>
 						</div>
 					</div>

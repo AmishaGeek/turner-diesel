@@ -57,16 +57,25 @@ jQuery(document).ready(function($) {
         prevArrow: '<button class="slide-arrow prev-arrow"></button>',
         nextArrow: '<button class="slide-arrow next-arrow"></button>',
         responsive: [{
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: false,
-                autoplay: true,
-                autoplaySpeed: 2000,
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
             }
-        }]
+        ]
     });
     jQuery('.our-service-slider').slick({
         slidesToShow: 1,
@@ -85,10 +94,11 @@ jQuery(document).ready(function($) {
         responsive: [{
                 breakpoint: 992,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     infinite: true,
                     dots: true,
+                    arrows: false
                 }
             },
             {
@@ -98,7 +108,7 @@ jQuery(document).ready(function($) {
                     slidesToScroll: 1,
                     infinite: true,
                     dots: true,
-                    autoplay: true,
+                    // autoplay: true,
                     autoplaySpeed: 2000,
                 }
             }
@@ -129,8 +139,7 @@ jQuery(document).ready(function($) {
     });
 
     /* Mobile Menu JS */
-    // jQuery("#menu-item-21 a").first().attr('href', 'javascript:void(0);');
-    jQuery("#main-menu .menu-item a").click(function() {
+    jQuery("#primary-menu .menu-item a").click(function() {
         jQuery("#site-navigation").removeClass("toggled");
     });
 
@@ -172,6 +181,7 @@ function gallery_slider() {
 jQuery(window).on('load resize', function() {
     var window_size = jQuery(window).width();
     if (window_size <= 991) {
+        jQuery("#menu-item-24 a").first().attr('href', 'javascript:void(0);');
 
         jQuery('body').on('click', '#primary-menu .menu-item-has-children', function() {
             if ((jQuery(this).hasClass('active-sub-menu'))) {

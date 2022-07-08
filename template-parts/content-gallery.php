@@ -2,7 +2,7 @@
 
 <!-- Start of Gallery -->
 <div class="gallery-sec">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
                 <div class="gallery-slider">    
@@ -18,15 +18,6 @@
                         $i++;
 						endforeach;
 					endif; ?>
-                    <!-- <a href="javascript:void(0);">
-                        <div class="gallery-img bg-img" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2022/07/galery-img-2.jpg');"></div>
-                    </a>
-                    <a href="javascript:void(0);">
-                        <div class="gallery-img bg-img" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2022/07/galery-img-3.jpg');"></div>
-                    </a>
-                    <a href="javascript:void(0);">
-                        <div class="gallery-img bg-img" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2022/07/galery-img-4.jpg');"></div>
-                    </a> -->
                 </div>
             </div>
         </div>
