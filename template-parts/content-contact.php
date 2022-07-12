@@ -23,9 +23,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-5 order-lg-1 order-2">
-                <div class="footer-contact-info">
+                <div class="footer-contact-info wow left-animation" data-wow-duration="0.8s" data-wow-delay="0.2s">
                     <ul class="contact-link">
-                        <li class="wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                        <li>
                             <?php
                             //Phone number
                             $phone = get_field('phone', 'option');
@@ -39,13 +39,13 @@
                                 <span class="text callus"><?php echo $phone; ?></span>
                             </a>
                         </li>
-                        <li class="wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                        <li>
                             <a href="<?php the_field('address_link', 'option'); ?>" target="_blank" title="<?php echo strip_tags(get_field('footer_address', 'option')); ?>">
                                 <span class="icon"><img width="15" height="20" src="<?php echo home_url(); ?>/wp-content/themes/turner-diesel/assets/images/map-marker-alt.svg" alt="Map Icon"></span>
                                 <span class="text"><?php the_field('footer_address', 'option'); ?></span>
                             </a>
                         </li>
-                        <li class="wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.4s">
+                        <li>
                             <a href="mailto:<?php the_field('email', 'option'); ?>" title="<?php the_field('email', 'option'); ?>">
                                 <span class="icon"><img width="19" height="15" src="<?php echo home_url(); ?>/wp-content/themes/turner-diesel/assets/images/email.svg" alt="Email"></span>
                                 <span class="text"><?php the_field('email', 'option'); ?></span>
@@ -55,7 +55,7 @@
                 </div>
             </div>
             <div class="col-lg-7 order-lg-2 order-1">
-                <div class="main-contact-form wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.4s">
+                <div class="main-contact-form wow right-animation" data-wow-duration="0.8s" data-wow-delay="0.2s">
                     <?php echo do_shortcode('[contact-form-7 id="30" title="Contact Us"]'); ?>
                 </div>
             </div>

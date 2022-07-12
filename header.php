@@ -36,7 +36,7 @@
 		<header id="masthead" class="site-header">
 			<div class="top-header for-des-flex">
 				<div class="container">
-					<div class="row align-items-center">
+					<div class="row align-items-end">
 						<div class="col-lg-6">
 							<div class="site-branding">
 								<?php

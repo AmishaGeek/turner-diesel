@@ -1725,7 +1725,7 @@ button.close:hover {
 }
 
 .top-header .contact-link {
-    padding: 0 0 0 200px;
+    padding: 0 70px 0 200px;
 }
 
 .contact-link li {
@@ -1997,11 +1997,11 @@ button.close:hover {
 }
 
 .our-service-sec .sec-title .h2-title {
-    margin-bottom: 58px;
+    margin-bottom: 59px;
 }
 
 .service-menu {
-    margin-bottom: 33px;
+    margin-bottom: 34px;
 }
 
 .service-menu ul li {
@@ -2263,7 +2263,7 @@ a.learn-more:hover .icon {
 }
 
 .footer-contact-info {
-    padding: 106px 0 0 210px;
+    padding: 117px 0 0 210px;
 }
 
 .footer-contact-info li {
@@ -3182,6 +3182,9 @@ a.prev.page-numbers {
     .top-header {
         height: 165px;
     }
+    .sticky_head .top-header {
+        margin-top: -165px;
+    }
     .gallery-slider {
         --menu-center: 10px;
     }
@@ -3607,7 +3610,7 @@ a.prev.page-numbers {
         margin: 35px 0 0;
     }
     .row.services-row {
-        margin-bottom: 75px;
+        margin-bottom: 33px;
     }
     .main-service-sec .services-row:first-child .main-service-text {
         margin: 0;
@@ -3620,7 +3623,7 @@ a.prev.page-numbers {
         margin-bottom: 40px;
     }
     .main-service-sec {
-        padding-bottom: 70px;
+        padding-bottom: 68px;
     }
     .main-service-img-wp,
     .main-service-img {
@@ -3643,6 +3646,9 @@ a.prev.page-numbers {
     .main-contact-sec .footer-contact-info {
         padding-top: 40px;
         border-color: rgb(6 103 179 / 65%);
+    }
+    .main-service-content .h2-title {
+        margin-bottom: 18px;
     }
 }
 
@@ -3751,6 +3757,17 @@ a.prev.page-numbers {
         padding: 24px 20px 22px;
         margin: -120px 20px 0;
     }
+    .main-service-sec {
+        padding-bottom: 51px;
+    }
+    .main-service-content,
+    .main-service-sec .services-row:last-child .main-service-content,
+    .main-service-sec .services-row:first-child .main-service-content {
+        margin: 26px 0 0;
+    }
+    .main-service-text {
+        margin-bottom: 30px;
+    }
 }
 
 @media(max-width: 400px) {
@@ -3761,12 +3778,12 @@ a.prev.page-numbers {
     .menu-toggle {
         right: 15px;
     }
-    .h2-title {
-        font-size: 30px;
-        line-height: 40px;
-    }
     .bottom-header .container .row .col-lg-5 {
         left: 15px;
+    }
+    .header-menu {
+        padding-left: max(2vh, 15px);
+        padding-right: max(2vh, 15px);
     }
     .site-branding {
         width: 70vw;
@@ -3786,10 +3803,24 @@ a.prev.page-numbers {
     .main-contact-form {
         padding: 34px 15px;
     }
+    .main-service-img-wp,
+    .main-service-img,
     .gallery-img,
     .service-img-wp,
     .about-img-wp {
         height: 300px;
+    }
+    .copyright-link li {
+        display: block;
+        margin: 0 0 9px;
+    }
+    .copyright-link li a {
+        padding: 0;
+        border: 0;
+        margin: 0;
+    }
+    .modal-body.overflow-text {
+        padding: 40px 15px 40px 15px;
     }
 }
 

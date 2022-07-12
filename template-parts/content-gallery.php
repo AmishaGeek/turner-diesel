@@ -4,7 +4,7 @@
 <div class="gallery-sec">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.1s">
                 <div class="gallery-slider">    
                 <?php
 					$images = get_field('gallery_images',$frontpage_id);
