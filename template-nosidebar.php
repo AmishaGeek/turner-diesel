@@ -4,7 +4,7 @@
  */
   get_header();
 ?>
-<section class="inner-banner">
+<section class="inner-banner inner-banner-page">
     <div class="inner-banner-img bg-img" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2022/07/main-banner.jpg');"></div>
     <div class="sec-wp">
         <div class="container">

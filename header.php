@@ -31,7 +31,7 @@
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
-		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'turner-diesel'); ?></a>
+		<a class="skip-link screen-reader-text" href="#primary" title="Skip to content"><?php esc_html_e('Skip to content', 'turner-diesel'); ?></a>
 
 		<header id="masthead" class="site-header">
 			<div class="top-header for-des-flex">
@@ -58,7 +58,7 @@
 									?>
 									<a href="tel:<?php echo $phone_link; ?>" title="Call <?php echo $phone; ?>" class="phone">
 										<span class="icon"><img width="20" height="20" src="<?php echo home_url(); ?>/wp-content/themes/turner-diesel/assets/images/phone-alt.svg" alt="Phone Icon"></span>
-										<span class="text"><?php echo $phone; ?></span>
+										<span class="text callus"><?php echo $phone; ?></span>
 									</a>
 								</li>
 								<li>

@@ -1931,6 +1931,7 @@ button.close:hover {
     background: -ms-linear-gradient(left, rgba(0, 0, 0, 1) 500px, rgba(0, 0, 0, 0) 100%);
     background: linear-gradient(to right, rgba(0, 0, 0, 1) 500px, rgba(0, 0, 0, 0) 100%);
     z-index: 1;
+    pointer-events: none;
 }
 
 .banner-img {
@@ -1941,6 +1942,7 @@ button.close:hover {
     bottom: 0;
     background-position: bottom;
     background-size: contain;
+    pointer-events: none;
 }
 
 .banner-content p {
@@ -2354,6 +2356,7 @@ a.learn-more:hover .icon {
     right: 0;
     background-position: bottom;
     background-size: auto;
+    pointer-events: none;
 }
 
 .inner-banner-content h3 {
@@ -2401,14 +2404,13 @@ a.learn-more:hover .icon {
 .service-list {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 9px;
 }
 
 .service-list li {
     flex: 0 0 33%;
     position: relative;
     margin-bottom: 4px;
-    padding-right: 13px;
+    padding-left: 10px;
 }
 
 .service-list li::before {
@@ -2419,7 +2421,7 @@ a.learn-more:hover .icon {
     background: var(--dark-color);
     border-radius: 50%;
     top: 50%;
-    left: -11px;
+    left: 0;
     transform: translate(0, -50%);
 }
 
@@ -3104,7 +3106,7 @@ a.prev.page-numbers {
     }
 }
 
-@media(min-width: 2100px) {
+@media(min-width: 1921px) {
     .container {
         max-width: 1400px;
     }
@@ -3120,9 +3122,6 @@ a.prev.page-numbers {
     }
     .main-navigation .menu li a {
         font-size: 16px;
-    }
-    .site-branding {
-        width: 140px;
     }
     .h1-title {
         font-size: 90px;
@@ -3158,8 +3157,15 @@ a.prev.page-numbers {
         font-size: 18px;
         width: 190px;
     }
+    .main-banner {
+        padding: 400px 0 270px;
+    }
+    .inner-banner::before,
+    .main-banner::before {
+        background: linear-gradient(to right, rgba(0, 0, 0, 1) 1000px, rgba(0, 0, 0, 0) 100%);
+    }
     .banner-btn .sec-btn {
-        width: 230px;
+        width: 270px;
     }
     .sec-btn.cta-btn {
         right: -72px;
@@ -3167,11 +3173,29 @@ a.prev.page-numbers {
     [data-simplebar=init] {
         padding-right: 11px;
     }
+    .about-img-wp {
+        width: calc(100% + 25vw);
+    }
+    .site-footer {
+        margin-top: -14px;
+    }
+    .top-header {
+        height: 165px;
+    }
+    .gallery-slider {
+        --menu-center: 10px;
+    }
+    .main-contact-sec {
+        margin: -120px 0 15px;
+    }
 }
 
 @media(max-width: 1499px) {
     .gallery-slider .slick-list {
         width: calc(100% + -50px);
+    }
+    .footer-contact-info {
+        padding-left: 110px;
     }
 }
 
@@ -3206,7 +3230,7 @@ a.prev.page-numbers {
         padding: 110px 0 100px 40px;
     }
     .service-menu ul li {
-        margin: 0 15px;
+        margin: 0 10px;
         padding: 0 15px;
     }
     .service-content {
@@ -3223,6 +3247,11 @@ a.prev.page-numbers {
     }
     .footer-text {
         padding-right: 50px;
+    }
+    .main-service-img-wp,
+    .services-row.even .main-service-img-wp,
+    .main-service-sec .services-row:first-child .main-service-text {
+        padding: 0;
     }
 }
 
@@ -3370,6 +3399,10 @@ a.prev.page-numbers {
     .main-navigation .menu li.menu-item-has-children>a {
         display: none;
     }
+    .main-navigation .menu li.menu-item-has-children ul.sub-menu li:hover a {
+        color: var(--red-color);
+        -webkit-text-stroke: 1px;
+    }
     .header-menu .for-mob {
         margin: 5vh 0 0;
         transition: .3s;
@@ -3395,22 +3428,35 @@ a.prev.page-numbers {
     .modal-body.overflow-text {
         padding: 40px 30px 40px 30px;
     }
-    .h1-title {
-        font-size: 55px;
+    .h1-title,
+    .inner-banner-content .h1-title {
+        font-size: 45px;
         line-height: 55px;
     }
     .banner-content p {
         margin-bottom: 26px;
+        font-size: 20px;
     }
     .main-banner {
         padding: 251px 0 179px;
+        text-align: center;
     }
+    .inner-banner::before,
+    .main-banner::before {
+        background: var(--dark-color);
+        /* background: linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) 100%); */
+        opacity: 0.9;
+    }
+    /* .banner-img {
+        background-color: var(--white-color);
+        background-blend-mode: luminosity;
+    } */
     .about-content {
         padding: 0;
     }
     .about-img-wp {
         width: 100%;
-        height: 400px;
+        height: 350px;
         right: 0;
         margin-bottom: 31px;
     }
@@ -3421,7 +3467,7 @@ a.prev.page-numbers {
         padding: 80px 0 70px;
     }
     .our-service-sec {
-        padding: 72px 0 27px;
+        padding: 72px 0 26px;
     }
     .our-service-sec .sec-title .h2-title {
         text-align: center;
@@ -3446,7 +3492,7 @@ a.prev.page-numbers {
     .service-img-wp {
         min-height: auto;
         width: 100%;
-        height: 400px;
+        height: 350px;
     }
     .service-content {
         padding: 24px 30px 22px;
@@ -3468,15 +3514,135 @@ a.prev.page-numbers {
     .service-menu {
         margin-bottom: 21px;
     }
+    .gallery-sec .col-lg-12,
+    .gallery-sec .container-fluid {
+        padding: 0 !important;
+    }
     .gallery-slider .slick-list {
         left: 0;
     }
     .gallery-img {
-        height: 400px;
+        height: 350px;
     }
     .copyright {
         display: block;
         text-align: center;
+    }
+    .top-footer::before {
+        display: none;
+    }
+    .top-footer::after {
+        background: var(--primary-color);
+        opacity: 1;
+        pointer-events: none;
+    }
+    .top-footer {
+        background-image: none !important;
+        padding: 80px 0 76px;
+    }
+    .footer-info-wp {
+        text-align: center;
+    }
+    .footer-text {
+        padding: 0;
+    }
+    .footer-contact-info {
+        text-align: center;
+        margin-top: 40px;
+        padding: 40px 0 0;
+        border-top: 1.5px solid rgb(255 255 255 / 65%);
+    }
+    .contact-link li a .icon svg path {
+        fill: var(--white-color);
+    }
+    .contact-link li a {
+        align-items: center;
+        flex-direction: column;
+    }
+    .contact-link li a .icon {
+        width: 28px;
+        height: 28px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    .contact-link li a .icon svg {
+        height: 100%;
+        width: 100%;
+    }
+    .contact-link li:first-child a .icon {
+        margin-bottom: 18px;
+        width: 25px;
+        height: 25px;
+    }
+    .contact-link li:last-child a .icon {
+        margin-bottom: 5px;
+    }
+    .copyright-link li:first-child {
+        display: block;
+        margin-bottom: 9px;
+    }
+    .copyright-link li:nth-child(2) a {
+        border: 0 !important;
+    }
+    .service-menu .slick-active {
+        font-size: 16px;
+        -webkit-text-stroke: 0;
+    }
+    .service-menu ul li {
+        max-height: 55px;
+    }
+    .inner-banner,
+    .inner-banner.contact-us {
+        padding: 190px 0 150px;
+        text-align: center;
+    }
+    .inner-banner.inner-banner-page {
+        padding: 170px 0 75px;
+    }
+    .inner-banner-content h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+    .main-service-sec .services-row:first-child .main-service-content {
+        margin: 35px 0 0;
+    }
+    .row.services-row {
+        margin-bottom: 75px;
+    }
+    .main-service-sec .services-row:first-child .main-service-text {
+        margin: 0;
+    }
+    .main-service-sec .services-row:last-child .main-service-content {
+        margin-top: 32px;
+    }
+    .main-service-text {
+        padding: 0;
+        margin-bottom: 40px;
+    }
+    .main-service-sec {
+        padding-bottom: 70px;
+    }
+    .main-service-img-wp,
+    .main-service-img {
+        height: 350px;
+        min-height: auto;
+    }
+    .inner-banner-text {
+        padding: 0;
+    }
+    .main-contact-form,
+    .main-contact-form {
+        padding: 35px 30px;
+        margin: 0;
+    }
+    .main-contact-sec {
+        margin: 0;
+        margin-top: -80px;
+        padding-bottom: 70px;
+    }
+    .main-contact-sec .footer-contact-info {
+        padding-top: 40px;
+        border-color: rgb(6 103 179 / 65%);
     }
 }
 
@@ -3491,12 +3657,19 @@ a.prev.page-numbers {
     .widget-area {
         margin-top: 50px;
     }
-    .banner-btn .sec-btn+.sec-btn {
-        margin: 0;
-        margin-top: 30px;
-    }
     .banner-btn .sec-btn {
         display: flex;
+        margin: 0 auto;
+    }
+    .banner-btn .sec-btn+.sec-btn {
+        margin: 30px auto 0;
+    }
+    .main-banner {
+        padding: 210px 0 150px;
+    }
+    .h2-title {
+        font-size: 32px;
+        line-height: 40px;
     }
 }
 
@@ -3522,11 +3695,6 @@ a.prev.page-numbers {
         width: 50px;
         height: 50px;
     }
-    button.close {
-        top: 0px;
-        right: 20px;
-        font-size: 45px;
-    }
     .page-numbers li a,
     .page-numbers li,
     span.page-numbers,
@@ -3539,6 +3707,50 @@ a.prev.page-numbers {
     .page-numbers li {
         margin-bottom: 10px;
     }
+    .site-branding {
+        width: 250px;
+    }
+    .header-menu {
+        padding-left: max(3vh, 30px);
+        padding-right: max(3vh, 30px);
+    }
+    .sec-btn.lg-btn {
+        width: 100%;
+    }
+    .main-banner {
+        padding: 185px 0 130px;
+    }
+    .h1-title,
+    .inner-banner-content .h1-title {
+        font-size: 42px;
+        line-height: 42px;
+    }
+    .copyright-text a {
+        display: inline-block;
+    }
+    .service-list li {
+        flex: 0 0 50%;
+    }
+    .about-sec {
+        padding: 60px 0 53px;
+    }
+    .our-service-sec {
+        padding: 52px 0 6px;
+    }
+    .our-service-sec .sec-title .h2-title {
+        margin-bottom: 33px;
+    }
+    .top-footer {
+        padding: 60px 0 56px;
+    }
+    .h2-title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+    .service-content {
+        padding: 24px 20px 22px;
+        margin: -120px 20px 0;
+    }
 }
 
 @media(max-width: 400px) {
@@ -3549,12 +3761,35 @@ a.prev.page-numbers {
     .menu-toggle {
         right: 15px;
     }
-    .site-header .container .row .col-lg-3 {
+    .h2-title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .bottom-header .container .row .col-lg-5 {
         left: 15px;
     }
+    .site-branding {
+        width: 70vw;
+    }
+    .sec-btn,
+    .form-submit .submit {
+        width: 100%;
+    }
+    .banner-btn .sec-btn,
     .banner-btn .sec-btn+.sec-btn {
-        margin: 0;
         margin-top: 15px;
+    }
+    .service-content {
+        padding: 20px 15px;
+        margin: -120px 15px 0;
+    }
+    .main-contact-form {
+        padding: 34px 15px;
+    }
+    .gallery-img,
+    .service-img-wp,
+    .about-img-wp {
+        height: 300px;
     }
 }
 
@@ -3578,6 +3813,28 @@ a.prev.page-numbers {
     .modal-body span.wpcf7-not-valid-tip {
         font-size: 14px;
         bottom: -24px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-height: 800px) {
+    .main-banner {
+        padding: 350px 0 220px;
+    }
+    .banner-content .h1-title {
+        font-size: 60px;
+        line-height: 60px;
+    }
+    .banner-content p {
+        margin-bottom: 25px;
+    }
+    .banner-img {
+        width: 1400px;
+    }
+}
+
+@media only screen and (min-width: 1921px) and (max-height: 800px) {
+    .banner-img {
+        width: 1300px;
     }
 }
 

@@ -4,10 +4,10 @@
     <div class="sec-wp">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-7">
                     <div class="inner-banner-content white-text">
-                        <h3>Services</h3>
-                        <h1 class="h1-title"><?php the_title(); ?></h1>
+                        <h3 class="wow left-animation" data-wow-duration="0.8s" data-wow-delay="0.2s">Services</h3>
+                        <h1 class="h1-title wow left-animation" data-wow-duration="0.8s" data-wow-delay="0.4s"><?php the_title(); ?></h1>
                     </div>
                 </div>
             </div>
@@ -27,13 +27,13 @@
                     <div class="row services-row even">
                         <div class="col-lg-6 order-2 order-lg-1">  
                             <div class="main-service-content">
-                                <h2 class="h2-title"><?php the_sub_field('service_title') ?></h2>
-                                <div class="main-service-text">
+                                <h2 class="h2-title wow left-animation" data-wow-duration="0.8s" data-wow-delay="0.2s"><?php the_sub_field('service_title') ?></h2>
+                                <div class="main-service-text wow left-animation" data-wow-duration="0.8s" data-wow-delay="0.3s">
                                     <?php the_sub_field('service_content'); ?>
                                 </div>
                                 <?php
                                 if (have_rows('point_list')) { ?>
-                                    <ul class="service-list">
+                                    <ul class="service-list wow left-animation" data-wow-duration="0.8s" data-wow-delay="0.4s">
                                         <?php
                                             while (have_rows('point_list')) {
                                                 the_row(); ?>
@@ -44,7 +44,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6 order-1 order-lg-2">
-                            <div class="main-service-img-wp">
+                            <div class="main-service-img-wp wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.2s">
                                 <div class="main-service-img bg-img" style="background-image: url('<?php the_sub_field('service_image'); ?>');"></div>
                             </div>
                         </div>
@@ -52,19 +52,19 @@
                 <?php else: ?>
                     <div class="row services-row odd">
                         <div class="col-lg-6">
-                            <div class="main-service-img-wp">
+                            <div class="main-service-img-wp wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.2s">
                                 <div class="main-service-img bg-img" style="background-image: url('<?php the_sub_field('service_image'); ?>');"></div>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="main-service-content">
-                                <h2 class="h2-title"><?php the_sub_field('service_title') ?></h2>
-                                <div class="main-service-text">
+                                <h2 class="h2-title wow right-animation" data-wow-duration="0.8s" data-wow-delay="0.2s"><?php the_sub_field('service_title') ?></h2>
+                                <div class="main-service-text wow right-animation" data-wow-duration="0.8s" data-wow-delay="0.3s">
                                     <?php the_sub_field('service_content'); ?>
                                 </div>
                                 <?php
                                 if (have_rows('point_list')) { ?>
-                                    <ul class="service-list">
+                                    <ul class="service-list wow left-animation" data-wow-duration="0.8s" data-wow-delay="0.4s">
                                         <?php
                                             while (have_rows('point_list')) {
                                                 the_row(); ?>

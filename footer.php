@@ -48,19 +48,36 @@
 									$phone_link = str_replace($val, $replace, $phone);
 									?>
 									<a href="tel:<?php echo $phone_link; ?>" title="Call <?php echo $phone; ?>" class="phone">
-										<span class="icon"><img width="20" height="20" src="<?php echo home_url(); ?>/wp-content/themes/turner-diesel/assets/images/phone-alt.svg" alt="Phone Icon"></span>
-										<span class="text"><?php echo $phone; ?></span>
+										<span class="icon"> 
+											<svg xmlns="http://www.w3.org/2000/svg" width="19.486" height="19.486" viewBox="0 0 19.486 19.486">
+												<g transform="translate(-0.492 19.486) rotate(-90)">
+													<path d="M18.93,13.776l-4.263-1.827a.913.913,0,0,0-1.066.263l-1.888,2.306A14.107,14.107,0,0,1,4.971,7.774L7.277,5.887A.911.911,0,0,0,7.54,4.821L5.713.558A.92.92,0,0,0,4.666.029L.708.943A.913.913,0,0,0,0,1.833,17.657,17.657,0,0,0,17.659,19.492a.913.913,0,0,0,.891-.708l.913-3.958a.924.924,0,0,0-.533-1.05Z" transform="translate(0 0.486)" fill="#0667b3"/>
+												</g>
+											</svg>
+										</span>	
+										<span class="text callus"><?php echo $phone; ?></span>
 									</a>
 								</li>
 								<li>
 									<a href="<?php the_field('address_link','option'); ?>" target="_blank" title="<?php echo strip_tags(get_field('footer_address','option')); ?>">
-										<span class="icon"><img width="15" height="20" src="<?php echo home_url(); ?>/wp-content/themes/turner-diesel/assets/images/map-marker-alt.svg" alt="Map Icon"></span>
+										<span class="icon">
+											<svg xmlns="http://www.w3.org/2000/svg" width="14.852" height="19.803" viewBox="0 0 14.852 19.803">
+												<path d="M6.663,19.4C1.043,11.257,0,10.42,0,7.426a7.426,7.426,0,0,1,14.852,0c0,2.994-1.043,3.83-6.663,11.977a.929.929,0,0,1-1.526,0Zm.763-8.883A3.094,3.094,0,1,0,4.332,7.426,3.094,3.094,0,0,0,7.426,10.52Z" fill="#0667b3"/>
+											</svg>
+										</span>
 										<span class="text"><?php the_field('footer_address','option'); ?></span>
 									</a>
 								</li>
 								<li>
 									<a href="mailto:<?php the_field('email','option'); ?>" title="<?php the_field('email','option'); ?>">
-										<span class="icon"><img width="19" height="15" src="<?php echo home_url(); ?>/wp-content/themes/turner-diesel/assets/images/email.svg" alt="Email"></span>
+										<span class="icon">
+											<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+												<g transform="translate(0 0)">
+													<rect width="23" height="23" transform="translate(0 0)" fill="#0667b3" opacity="0"/>
+													<path d="M17.831,4H4.794A2.768,2.768,0,0,0,2,6.742v9.141a2.768,2.768,0,0,0,2.794,2.742H17.831a2.768,2.768,0,0,0,2.794-2.742V6.742A2.768,2.768,0,0,0,17.831,4Zm0,1.828L11.778,9.914a.946.946,0,0,1-.931,0L4.794,5.828Z" transform="translate(0 -0.118)" fill="#0667b3"/>
+												</g>
+											</svg>
+										</span>
 										<span class="text"><?php the_field('email','option'); ?></span>
 									</a>
 								</li>
